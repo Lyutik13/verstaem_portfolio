@@ -18,14 +18,13 @@
   &__descr {
     padding-top: 6px;
     .devider {
-      margin-top: 0;
+      margin: 0;
     }
   }
   &__title {
     position: relative;
     @include before_circle;
     padding-left: 12px;
-    margin-bottom: 6px;
   }
   &__text {
     padding-top: 20px;

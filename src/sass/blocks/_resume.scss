@@ -1,0 +1,95 @@
+.resume {
+  padding-left: 85px;
+  padding-top: 120px;
+  &__title {
+    text-align: center;
+    position: relative;
+    @include before_circle;
+    &::before {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  &__subtitle {
+    text-align: center;
+  }
+  &__wrapper {
+    padding: 60px 65px 0 65px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2, 425px);
+    gap: 135px;
+  }
+  &__column {
+    &-title {
+      padding-left: 43px;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        border-radius: 100%;
+        background: $main-color;
+        left: -7px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+    ul {
+      list-style-type: none;
+      margin-bottom: 0;
+      padding: 0;
+      li {
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          width: 1px;
+          height: calc(100% + 16px);
+          top: -8px;
+          left: 0px;
+          background-color: #000;
+        }
+      }
+    }
+  }
+  &__item {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      height: 1px;
+      width: 42px;
+      background-color: #000;
+      top: 57px;
+      left: 1px;
+    }
+    &-head {
+      position: relative;
+      padding: 45px 0 0 100px;
+    }
+    &-body {
+      padding-left: 43px;
+      margin-top: 12px;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 18px;
+    }
+    &-icon {
+      position: absolute;
+      top: 41px;
+      left: 43px;
+      @include before_circle;
+      padding: 15px 0 0 15px;
+      &:before {
+        top: 0;
+      }
+    }
+    &-location {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+}
