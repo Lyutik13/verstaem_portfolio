@@ -13,8 +13,8 @@
   &__item {
     display: grid;
     padding-left: 25px;
-    grid-template-rows: 20px 20px;
-    grid-template-columns: 190px 125px;
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(2, auto);
     justify-content: space-between;
     align-content: space-between;
     &-title {
@@ -30,6 +30,9 @@
         top: 50%;
         transform: translateY(-50%);
       }
+    }
+    &-price {
+      justify-self: end;
     }
     &-desc {
       grid-column: 1/3;
