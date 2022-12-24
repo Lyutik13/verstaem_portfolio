@@ -6,8 +6,11 @@
   width: 340px;
   z-index: 3;
   top: 50%;
-  left: 31px;
+  left: -15px;
   transform: rotate(-90deg) translateY(-499%);
+  &__text {
+    margin: 0;
+  }
   &__divider {
     height: 2px;
     width: 70px;
