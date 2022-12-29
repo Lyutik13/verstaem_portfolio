@@ -94,7 +94,14 @@
     <div class="container">
       <div class="about__wrapper">
         <div class="about__photo">
-          <img src="img/main_photo-min.jpg" alt="main_photo" />
+          <picture>
+            <source media="(max-width: 576px)" srcset="img/main_photo-mobile.jpg">
+            <source media="(min-width: 577px)" srcset="img/main_photo-min.jpg">
+            <img src="img/main_photo-min.jpg" alt="photo">
+          </picture>
+          <!-- <img srcset="img/main_photo-mobile.jpg 300w,
+                        img/main_photo-min.jpg 400w" sizes="(max-width: 576px) 280px,
+                  (min-width: 577px) 400px" src="img/main_photo-min.jpg" alt="main_photo" /> -->
         </div>
         <div class="about__descr">
           <h2 class="title title_fz16 about__title">Про меня</h2>
@@ -467,7 +474,7 @@
           <div class="prise__item-title title title_fz14">
             Корпоративный сайт
           </div>
-          <div class="prise__item-price title title_fz14">от 20000 руб..</div>
+          <div class="prise__item-price title title_fz14">от 20000 руб.</div>
           <div class="prise__item-desc">
             Сайт для вашего бизнеса или компании
           </div>
@@ -552,7 +559,7 @@
               <div class="contacts__policy">
                 <input required type="checkbox" />
                 <span>Я согласен(а) с
-                  <a href="/policy.html" target="_blank">политикой конфиденциальности</a></span>
+                  <a class="contacts__policy-text" href="/policy.html" target="_blank">политикой конфиденциальности</a></span>
               </div>
             </div>
           </form>
